@@ -1,7 +1,9 @@
 language: java
 before_script: git clone -b CM `git config --get remote.origin.url` target/CM
 install: ''
-script: mvn clean deploy --settings target/CM/settings.xml
+#script: mvn clean deploy --settings target/CM/settings.xml
+script: mvn clean package
+--settings target/CM/settings.xml
 branches:
   only:
   - master
